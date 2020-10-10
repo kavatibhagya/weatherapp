@@ -1,8 +1,6 @@
-.header {
-  color: #fff;
-  display: flex;
-  min-height: 100px;
-  background-color: #14c08e;
+:root {
+  --color-primary: #14c08e;
+  --color-secondary: #fff;
 }
 
 .main {

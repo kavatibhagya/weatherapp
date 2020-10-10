@@ -1,0 +1,10 @@
+.header {
+  color: var(--color-secondary);;
+  display: flex;
+  min-height: 100px;
+  background-color: var(--color-primary);
+
+  &__logo {
+    font-weight: 500;
+  }
+}
