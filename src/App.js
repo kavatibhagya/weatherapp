@@ -1,16 +1,13 @@
 import React from 'react';
-import theme from './theme';
+import './App.scss';
 
 function App() {
   return (
     <>
-    <header class="header">
+    <main className="main">
 
-    </header>
-    <main class="main">
-      
     </main>
-    <footer>
+    <footer className="footer">
 
     </footer>
     </>
