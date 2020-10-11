@@ -15,7 +15,6 @@ function Container() {
     const getData = async () => {
       const response = await axios.get(`${url}?lat=${location.lat}&lon=${location.lon}&appid=${key}&units=imperial&exclude=minutely,alerts`);
       
-      console.log(response);
       if(response.data) {
         setCurrent(response.data.current);
       }
@@ -26,7 +25,6 @@ function Container() {
 
   return (
     <div className="container">
-      <div>Welcome to Weather App!</div>
       {
         current ?
           <Current weather={current} location={location}></Current>

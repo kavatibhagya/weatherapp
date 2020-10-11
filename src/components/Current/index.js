@@ -10,10 +10,19 @@ function Current({weather, location}) {
     return date.toLocaleDateString();
   }
 
+  const tempDescription = (list) => {
+    return list.reduce((item, desc) => desc = `${desc}, ${item.description}`, '');
+  }
+
 
   return (
     <div className="current">
       <div className="current__main">
+        <div>
+          <h2>{location.cityName}, {location.stateCode}</h2>
+          <h1 className="current__temp">{weather.temp}</h1>
+          <h2 className="current__desc">{tempDescription(weather.weather)}</h2>
+        </div>
         <h1>Current temparature at {location.cityName}, {location.stateCode} is {weather.temp}</h1>
         <h2>as of {getDate(weather.dt)}</h2>
       </div>
