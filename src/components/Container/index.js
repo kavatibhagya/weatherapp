@@ -14,8 +14,6 @@ function Container() {
     const getData = async () => {
       const response = await axios.get(`${url}?q=${location.cityName},${location.cityCode},${location.countryCode}&appid=${key}&units=imperial&cnt=5`);
       
-      console.log(response.data);
-
       if(response.data) {
         setWeather(response.data);
       }

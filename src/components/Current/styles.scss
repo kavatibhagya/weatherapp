@@ -1,0 +1,5 @@
+@import '../../theme/mixins.scss';
+
+.current {
+  @include card();
+}
