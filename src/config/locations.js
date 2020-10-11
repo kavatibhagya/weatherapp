@@ -18,4 +18,6 @@ const locations = [{
   cityName: 'Paris',
   stateCode: '',
   countryCode: 'FR',
-}]
+}];
+
+export default locations;

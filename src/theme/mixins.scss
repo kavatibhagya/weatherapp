@@ -1,0 +1,5 @@
+@mixin card() {
+  display: flex;
+  background-color: var(--color-secondary);
+  color: red;
+}
