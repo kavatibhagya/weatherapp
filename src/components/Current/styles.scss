@@ -5,11 +5,14 @@
 
   &__main {
     @include card();
-    margin-right: 10px;
+    flex-grow: 1;
+    margin-right: 20px;
   }
 
   &__additional {
     @include card();
+    flex-grow: 1;
+    justify-content: space-between;
   }
 
   &__item {

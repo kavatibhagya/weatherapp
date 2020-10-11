@@ -11,7 +11,10 @@ function Current({weather, location}) {
   }
 
   const tempDescription = (list) => {
-    return list.reduce((item, desc) => desc = `${desc}, ${item.description}`, '');
+    return list.reduce((desc, item) => {
+      desc = desc.length ? `${desc}, ${item.description}` : item.description;
+      return desc;
+    }, '');
   }
 
 
@@ -20,11 +23,10 @@ function Current({weather, location}) {
       <div className="current__main">
         <div>
           <h2>{location.cityName}, {location.stateCode}</h2>
+          <h4>as of {getDate(weather.dt)}</h4>
           <h1 className="current__temp">{weather.temp}</h1>
           <h2 className="current__desc">{tempDescription(weather.weather)}</h2>
         </div>
-        <h1>Current temparature at {location.cityName}, {location.stateCode} is {weather.temp}</h1>
-        <h2>as of {getDate(weather.dt)}</h2>
       </div>
       <div className="current__additional">
         <div>
@@ -39,6 +41,24 @@ function Current({weather, location}) {
           <div className="current__item">
             <div>Wind speed: </div>
             <div>{weather.wind_speed} mph</div>
+          </div>
+          <div className="current__item">
+            <div>Visibiltiy: </div>
+            <div>{weather.visibility/1000} mi</div>
+          </div>
+        </div>
+        <div>
+        <div className="current__item">
+            <div>Dew Point: </div>
+            <div>{weather.dew_point}</div>
+          </div>
+          <div className="current__item">
+            <div>UV Index: </div>
+            <div>{weather.uvi}</div>
+          </div>
+          <div className="current__item">
+            <div>Visibiltiy: </div>
+            <div>{weather.visibility/1000} mi</div>
           </div>
         </div>
       </div>
