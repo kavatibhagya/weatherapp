@@ -1,6 +1,22 @@
 @import '../../theme/mixins.scss';
 
 .current {
-  @include card();
-  background-color: var(--color-third);
+  @include flex-container($justify: space-between);
+
+  &__main {
+    @include card();
+    flex-grow: 1;
+    margin-right: 10px;
+    background-color: var(--color-third);
+  }
+
+  &__additional {
+    @include card();
+    flex-grow: 1;
+    background-color: var(--color-third);
+  }
+
+  &__item {
+    @include flex-container($justify: space-between);
+  }
 }

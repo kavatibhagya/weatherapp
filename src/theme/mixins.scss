@@ -1,7 +1,13 @@
-@mixin card() {
+@mixin flex-container($direction: row, $wrap: wrap, $justify: align-left) {
   display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
+
+@mixin card() {
+  @include flex-container();
   padding: 10px;
   border-radius: 6px;
-  background-color: var(--color-third);
+  background-color: var(--color-secondary);
   box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
 }
