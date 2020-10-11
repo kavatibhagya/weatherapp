@@ -2,6 +2,8 @@ const locations = [{
   cityName: 'San Jose',
   stateCode: 'CA',
   countryCode: 'USA',
+  lat: 37.3382,
+  lon: -121.8863,
 }, {
   cityName: 'San Francisco',
   stateCode: 'CA',

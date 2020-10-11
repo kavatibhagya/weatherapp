@@ -1,11 +1,7 @@
 @import "../../theme/mixins.scss";
 
-.main {
+.container {
   min-width: 80%;
   max-width: 1280px;
   margin: 20px auto;
-}
-
-.current-weather {
-  @include card();
 }

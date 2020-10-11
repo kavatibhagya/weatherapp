@@ -2,4 +2,5 @@
 
 .current {
   @include card();
+  background-color: var(--color-third);
 }
