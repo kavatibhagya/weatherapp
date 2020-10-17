@@ -5,11 +5,13 @@ import './styles.scss';
 import locations from '../../config/locations';
 import api from '../../config/api';
 import Current from '../Current';
+import Hourly from '../Hourly';
 
 function Container() {
   const { key, url } = api;
   const [location, setLocation] = useState(locations[0]);
   const [current, setCurrent] = useState();
+  const [hourly, setHourly] = useState();
   
   useEffect(() => {
     const getData = async () => {
@@ -17,6 +19,7 @@ function Container() {
       
       if(response.data) {
         setCurrent(response.data.current);
+        setHourly(response.data.hourly);
       }
     }
 
@@ -29,6 +32,9 @@ function Container() {
         current ?
           <Current weather={current} location={location}></Current>
         : ''
+      }
+      {
+        hourly ? <Hourly weather={hourly}></Hourly> : ''
       }
     </div>
   )

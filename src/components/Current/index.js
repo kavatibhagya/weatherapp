@@ -57,8 +57,8 @@ function Current({weather, location}) {
             <div>{weather.uvi}</div>
           </div>
           <div className="current__item">
-            <div>Visibiltiy: </div>
-            <div>{weather.visibility/1000} mi</div>
+            <div>Pressure: </div>
+            <div>{weather.pressure}</div>
           </div>
         </div>
       </div>
