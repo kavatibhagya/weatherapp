@@ -2,4 +2,24 @@
 
 .hourly {
   @include card();
+  padding: 10px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  &__card {
+    margin: 10px;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  &__temp {
+    font-size: 32px;
+    position: relative;
+
+    &::after {
+      @include degree();
+    }
+  }
 }

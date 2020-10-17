@@ -24,14 +24,7 @@
     position: relative;
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 5px;
-      width: 6px;
-      height: 6px;
-      margin-left: 5px;
-      border-radius: 50%;
-      border: 3px solid black;
+      @include degree();
     }
   }
 

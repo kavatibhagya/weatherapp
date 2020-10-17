@@ -11,3 +11,14 @@
   background-color: var(--color-secondary);
   box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
 }
+
+@mixin degree() {
+  content: '';
+    position: absolute;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
