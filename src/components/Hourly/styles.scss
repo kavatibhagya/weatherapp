@@ -12,6 +12,7 @@
     padding: 10px;
     min-width: 100px;
     min-height: 100px;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
   }
 
   &__temp {
@@ -21,5 +22,10 @@
     &::after {
       @include degree();
     }
+  }
+
+  &__time {
+    margin-top: 10px;
+    font-size: 20px;
   }
 }
